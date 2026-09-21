@@ -86,7 +86,7 @@ textarea:focus-visible {
     padding-block: 0.75rem;
     border-bottom: 5px solid var(--color-hover);
     background-color: var(--color-primary);
-    color: var(--color-border);
+    color: var(--color-background);
 }
 
 .header-content {
@@ -233,7 +233,7 @@ h1 {
 
 .section-description {
     max-width: 600px;
-    color: var(--color-text-muted);
+    color: var(--color-primary-dark);
     font-size: 1.1rem;
 }
 
@@ -326,7 +326,7 @@ h1 {
 
 .price span {
     margin-left: 0.25rem;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0;
@@ -336,7 +336,7 @@ h1 {
     width: fit-content;
     margin-top: auto;
     padding-top: 2rem;
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     font-weight: 800;
     text-underline-offset: 0.3rem;
 }
@@ -369,7 +369,7 @@ h1 {
 .steps-list p {
     max-width: 620px;
     margin-bottom: 0;
-    color: var(--color-primary-dark);
+    color: var(--color-text-muted);
 }
 
 .site-footer {
@@ -517,7 +517,7 @@ h4 {
 .project-notice {
     margin: 0;
     padding-top: 2rem;
-    border-top: 1px solid rgb(255 255 255 / 25%);
+    border-top: 1px solid var(--color-hover);
     color: var(--color-hover);
     font-size: 0.8rem;
 }
