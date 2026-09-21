@@ -469,7 +469,7 @@ textarea.invalid {
     margin-top: 1rem;
     font-weight: 700;
     font-size: 0.800rem;
-    color: var(--color-border);
+    color: var(--color-hover);
 }
 
 .footer-bottom {
