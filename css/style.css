@@ -228,7 +228,6 @@ h1 {
 .button:hover {
     border-color: var(--color-primary-dark);
     background-color: var(--color-primary-dark);
-    color: var(--color-hover);
     transform: translateY(-2px);
 }
 
