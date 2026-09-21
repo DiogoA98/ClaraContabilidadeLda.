@@ -159,6 +159,28 @@ textarea:focus-visible {
     padding-block: clamp(5rem, 12vw, 10rem);
 }
 
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: center;
+}
+
+.hero-text {
+    min-width: 0;
+}
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-visual img {
+    width: min(100%, 440px);
+    height: auto;
+}
+
 .eyebrow,
 .section-label {
     margin-bottom: 1.25rem;
@@ -574,6 +596,14 @@ h4 {
     .footer-bottom {
         grid-template-columns: 1fr 1fr;
     }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual img {
+        width: min(70vw, 340px);
+    }
 }
 
 @media (max-width: 600px) {
@@ -615,6 +645,14 @@ h4 {
 
     .hero {
         min-height: auto;
+    }
+
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .hero-visual img {
+        width: min(78vw, 290px);
     }
 
     h1 {
