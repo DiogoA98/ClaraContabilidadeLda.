@@ -484,7 +484,7 @@ textarea.invalid {
 }
 
 h4 {
-    font-size: clamp(0.8rem, 1.5vw, 5rem);
+    font-size: clamp(0.8rem, 2vw, 5rem);
     color: var(--color-hover);
     text-align: center;
 }
