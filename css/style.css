@@ -5,7 +5,7 @@
     --color-text-muted: #5f6862;
     --color-primary: #315c4c;
     --color-primary-dark: #244438;
-    --color-hover: #e9ad96;
+    --color-hover: #e9d396;
     --color-border: #d9ddd6;
     --color-error: #b42318;
 
@@ -78,29 +78,13 @@ textarea:focus-visible {
     margin-inline: auto;
 }
 
-.skip-link {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-    padding: 0.75rem 1rem;
-    transform: translateY(-200%);
-    border-radius: var(--radius-small);
-    background-color: var(--color-text);
-    color: var(--color-surface);
-}
-
-.skip-link:focus {
-    transform: translateY(0);
-}
-
 .site-header {
     position:sticky;
     display: flex;
     top:0;
     z-index: 10;
     padding-block: 0.75rem;
-    border-bottom: 3px solid var(--color-hover);
+    border-bottom: 5px solid var(--color-hover);
     background-color: var(--color-primary);
     color: var(--color-border);
 }
@@ -152,6 +136,10 @@ textarea:focus-visible {
 
 .main-nav a:hover {
     color: var(--color-hover);
+    text-decoration: underline;
+    text-decoration-color: var(--color-hover);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.4rem;
 }
 
 .hero {
@@ -206,7 +194,7 @@ h1 {
 }
 
 .button:hover {
-    border-color: var(--color-hover);
+    border-color: var(--color-primary-dark);
     background-color: var(--color-primary-dark);
     color: var(--color-hover);
     transform: translateY(-2px);
@@ -264,8 +252,13 @@ h1 {
 }
 
 .card-number {
+    display: inline-flex;
+    width: fit-content;
     margin-bottom: 4rem;
-    color: var(--color-hover);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background-color: var(--color-hover);
+    color: var(--color-primary-dark);
     font-size: 0.85rem;
     font-weight: 800;
 }
@@ -284,7 +277,7 @@ h1 {
 }
 
 .section-dark {
-    border-color: var(--color-primary-dark);
+    border-color: var(--color-hover);
     background-color: var(--color-primary);
     color: var(--color-surface);
 }
@@ -306,7 +299,7 @@ h1 {
     gap: 1rem;
     align-items: start;
     padding-block: 1.5rem;
-    border-top: 1px solid rgb(255 255 255 / 25%);
+    border-top: 1px solid var(--color-hover);
     counter-increment: services;
     font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
@@ -333,7 +326,7 @@ h1 {
 
 .price span {
     margin-left: 0.25rem;
-    color: var(--color-text-muted);
+    color: var(--color-primary-dark);
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0;
@@ -359,24 +352,30 @@ h1 {
     grid-template-columns: minmax(60px, 120px) 1fr;
     gap: 2rem;
     padding-block: 2rem;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-primary-dark);
 }
 
 .step-number {
-    color: var(--color-hover);
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background-color: var(--color-hover);
+    color: var(--color-primary-dark);
     font-weight: 800;
 }
 
 .steps-list p {
     max-width: 620px;
     margin-bottom: 0;
-    color: var(--color-text-muted);
+    color: var(--color-primary-dark);
 }
 
 .site-footer {
     padding-block: clamp(5rem, 10vw, 8rem) 2rem;
     background-color: var(--color-primary-dark);
-    color: var(--color-surface);
+    color: var(--color-background);
     scroll-margin-top: 2rem;
 }
 
@@ -390,7 +389,7 @@ h1 {
 }
 
 .footer-intro > p:last-child {
-    color: rgb(255 255 255 / 75%);
+    color: var(--color-surface);
     font-size: 1.1rem;
 }
 
@@ -399,8 +398,8 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     padding-block: 3rem;
-    border-top: 1px solid rgb(255 255 255 / 25%);
-    border-bottom: 1px solid rgb(255 255 255 / 25%);
+    border-top: 1px solid var(--color-hover);
+    border-bottom: 1px solid var(--color-hover);
 }
 
 .form-field {
@@ -422,10 +421,10 @@ input,
 select,
 textarea {
     width: 100%;
-    border: 1px solid rgb(255 255 255 / 35%);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-small);
     background-color: rgb(255 255 255 / 8%);
-    color: var(--color-surface);
+    color: var(--color-background);
 }
 
 input,
@@ -441,8 +440,8 @@ textarea {
 }
 
 select option {
-    background-color: var(--color-surface);
-    color: var(--color-primary-dark);
+    background-color: var(--color-primary);
+    color: var(--color-background);
 }
 
 input.invalid,
@@ -454,7 +453,7 @@ textarea.invalid {
 .field-help,
 .privacy-notice {
     margin-top: 0.5rem;
-    color: rgb(255 255 255 / 65%);
+    color: var(--color-border);
     font-size: 0.875rem;
 }
 
@@ -470,7 +469,7 @@ textarea.invalid {
     margin-top: 1rem;
     font-weight: 700;
     font-size: 0.800rem;
-    color: var(--color-text-muted);
+    color: var(--color-border);
 }
 
 .footer-bottom {
@@ -519,7 +518,7 @@ h4 {
     margin: 0;
     padding-top: 2rem;
     border-top: 1px solid rgb(255 255 255 / 25%);
-    color: rgb(255 255 255 / 55%);
+    color: var(--color-hover);
     font-size: 0.8rem;
 }
 
