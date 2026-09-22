@@ -59,12 +59,14 @@ ClaraContabilidadeLda/
     └── favicon512x512.png
 ```
 
-## Testes
+### Testes
 
-O website foi testado no Google PageSpeed Insights.
+O website foi validado e testado após a publicação no GitHub Pages.
 
-- Mobile: 92 em desempenho, 98 em acessibilidade e 100 em práticas recomendadas.
-- Desktop: 100 em desempenho, 98 em acessibilidade e 100 em práticas recomendadas.
+- HTML validado no Nu HTML Checker, sem erros nem avisos.
+- PageSpeed mobile: 92 em desempenho, 100 em acessibilidade e 100 em práticas recomendadas.
+- PageSpeed desktop: 100 em desempenho, 100 em acessibilidade e 100 em práticas recomendadas.
+- Contrastes verificados com o WebAIM Contrast Checker.
 - A pontuação de SEO é condicionada pelo `noindex`, incluído por ser um requisito do desafio para identificar o projeto como fictício.
 
 ## Nota
