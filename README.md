@@ -32,7 +32,7 @@ A identidade procura transmitir clareza, confiança e proximidade sem recorrer a
 
 ## Tempo
 
-- **Tempo total aproximado:** `[PREENCHER] horas`
+- **Tempo total aproximado:** `25 horas`
 
 ## Com mais tempo, faria...
 
