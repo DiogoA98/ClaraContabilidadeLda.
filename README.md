@@ -18,7 +18,9 @@ A identidade procura transmitir clareza, confiança e proximidade sem recorrer a
 - [One Page Love](https://onepagelove.com) - referências de websites de uma página
 - [Minimal Gallery](https://minimal.gallery) - inspiração para uma abordagem minimalista
 - [Behance](https://www.behance.net) - referências de projetos de identidade visual
-- [Fonts In Use](https://fontsinuse.com) - referências de combinações tipográficas
+- [Logobook](https://www.logobook.com) - inspiração para o desenvolvimento do símbolo e exploração de diferentes abordagens de identidade visual
+- [Google Fonts](https://fonts.google.com) - pesquisa e seleção das fontes EB Garamond e Noto Serif
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - verificação do contraste e da legibilidade das cores usadas no website
 
 ## Ferramentas
 
