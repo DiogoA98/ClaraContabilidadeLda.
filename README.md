@@ -4,7 +4,7 @@ Landing page e identidade visual desenvolvidas para o desafio fictício da DEMAR
 
 ## Identidade
 
-- **Cores:** `#F5F3EC`, `#FFFFFF`, `#202622`,`#5F6862`, `#315C4C`, `#244438`, `#E9D396`, `#D9DDD6`
+- **Cores:** `#F5F3EC`, `#202622`, `#315C4C`, `#244438`, `#E9D396`
 - **Fonte de títulos:** [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
 - **Fonte de texto:** [Noto Serif](https://fonts.google.com/noto/specimen/Noto+Serif)
 
@@ -13,12 +13,9 @@ A identidade procura transmitir clareza, confiança e proximidade, sem recorrer 
 ## Referências
 
 - [Land-book](https://land-book.com) - referências de landing pages e composição visual
-- [One Page Love](https://onepagelove.com) - referências de websites de uma página
-- [Minimal Gallery](https://minimal.gallery) - inspiração para uma abordagem minimalista
-- [Behance](https://www.behance.net) - referências de projetos de identidade visual
 - [Logobook](https://www.logobook.com) - inspiração para o desenvolvimento do símbolo e exploração de diferentes abordagens de identidade visual
 - [Google Fonts](https://fonts.google.com) - pesquisa e seleção das fontes EB Garamond e Noto Serif
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - verificação do contraste e da legibilidade das cores usadas no website
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - verificação do contraste e da legibilidade das cores usadas
 
 ## Ferramentas
 
@@ -61,6 +58,14 @@ ClaraContabilidadeLda/
     ├── Cbrancomini.png
     └── favicon512x512.png
 ```
+
+## Testes
+
+O website foi testado no Google PageSpeed Insights.
+
+- Mobile: 92 em desempenho, 98 em acessibilidade e 100 em práticas recomendadas.
+- Desktop: 100 em desempenho, 98 em acessibilidade e 100 em práticas recomendadas.
+- A pontuação de SEO é condicionada pelo `noindex`, incluído por ser um requisito do desafio para identificar o projeto como fictício.
 
 ## Nota
 
