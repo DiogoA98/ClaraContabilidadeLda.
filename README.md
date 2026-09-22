@@ -4,7 +4,7 @@ Landing page e identidade visual desenvolvidas para o desafio fictício da DEMAR
 
 ## Identidade
 
-- **Cores:** `#F5F3EC`, `#FFFFFF`, `#202622`, `#315C4C`, `#244438`, `#E9D396`
+- **Cores:** `#F5F3EC`, `#FFFFFF`, `#202622`,`#5F6862`, `#315C4C`, `#244438`, `#E9D396`, `#D9DDD6`
 - **Fonte de títulos:** [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
 - **Fonte de texto:** [Noto Serif](https://fonts.google.com/noto/specimen/Noto+Serif)
 
