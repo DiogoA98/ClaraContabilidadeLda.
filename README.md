@@ -12,8 +12,6 @@ A identidade procura transmitir clareza, confiança e proximidade, sem recorrer 
 
 ## Referências
 
-> Manter apenas os links que foram realmente consultados durante o desenvolvimento.
-
 - [Land-book](https://land-book.com) - referências de landing pages e composição visual
 - [One Page Love](https://onepagelove.com) - referências de websites de uma página
 - [Minimal Gallery](https://minimal.gallery) - inspiração para uma abordagem minimalista
