@@ -8,7 +8,7 @@ Landing page e identidade visual desenvolvidas para o desafio fictício da DEMAR
 - **Fonte de títulos:** [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
 - **Fonte de texto:** [Noto Serif](https://fonts.google.com/noto/specimen/Noto+Serif)
 
-A identidade procura transmitir clareza, confiança e proximidade sem recorrer ao aspeto visual típico de uma empresa financeira. Os verdes reforçam estabilidade e confiança, enquanto o creme e o amarelo tornam a comunicação mais humana e acolhedora. A combinação entre EB Garamond e Noto Serif cria uma presença clássica e credível, mantendo boa legibilidade no website.
+A identidade procura transmitir clareza, confiança e proximidade, sem recorrer ao aspeto visual típico de uma empresa financeira. Os verdes reforçam a estabilidade e a credibilidade, enquanto o creme e o amarelo tornam a comunicação mais humana e acolhedora. O caduceu foi integrado no logótipo por ser um símbolo associado à contabilidade e por estar presente na identidade visual da Ordem dos Contabilistas Certificados, reforçando a ligação da marca à profissão. A combinação entre EB Garamond e Noto Serif cria uma presença clássica e credível, mantendo uma boa legibilidade no website.
 
 ## Referências
 
