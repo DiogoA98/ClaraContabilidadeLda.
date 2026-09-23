@@ -629,14 +629,11 @@ textarea.invalid {
     .main-nav {
         width: 100%;
         flex: 0 0 auto;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem 1rem;
         padding: 0.5rem 0;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: thin;
-        -webkit-overflow-scrolling: touch;
+        overflow: visible;
     }
 
     .main-nav a {
