@@ -1,7 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("CLARA: CSS e JavaScript ligados corretamente.");
 
     const logoHome = document.querySelector("#logo-home");
 
