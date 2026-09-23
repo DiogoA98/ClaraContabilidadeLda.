@@ -233,9 +233,9 @@ h1 {
 
 .button-light {
     width: min(100%, 600px);
-    border-color: var(--color-surface);
-    background-color: var(--color-surface);
-    color: var(--color-primary-dark);
+    border-color: var(--color-background);
+    background-color: var(--color-primary);
+    color: var(--color-background);
     font-weight: 700;
 }
 
