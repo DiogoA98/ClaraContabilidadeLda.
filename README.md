@@ -25,7 +25,7 @@ A identidade procura transmitir clareza, confiança e proximidade, sem recorrer 
 - **Google Fonts:** carregamento das famílias EB Garamond e Noto Serif
 - **GitHub:** controlo de versões e alojamento do código
 - **GitHub Pages:** publicação da landing page
-- **Microsoft 365 Copilot:** apoio na revisão do código, validação da estrutura HTML/CSS/JavaScript, acessibilidade, responsividade e preparação do README. A identidade visual, o logótipo, a paleta e as decisões finais foram desenvolvidos e concretizados por mim.
+- **Microsoft 365 Copilot:** apoio na revisão do código, resolução de problemas técnicos e preparação do README. A identidade visual, o logótipo, a paleta e as decisões finais foram desenvolvidos e concretizados por mim.
 
 ## Tempo
 
