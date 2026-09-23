@@ -1,4 +1,4 @@
-# CLARA | Contabilidade
+# CLARA | Contabilidade Lda.
 
 Landing page e identidade visual desenvolvidas para o desafio fictício da DEMARCA. A CLARA é um gabinete de contabilidade online dirigido a freelancers, trabalhadores independentes e pequenas empresas em Portugal.
 
@@ -29,7 +29,7 @@ A identidade procura transmitir clareza, confiança e proximidade, sem recorrer 
 
 ## Tempo
 
-- **Tempo total aproximado:** `25 horas`
+- **Tempo total aproximado:** `40 horas`
 
 ## Com mais tempo, faria...
 
@@ -37,26 +37,21 @@ A identidade procura transmitir clareza, confiança e proximidade, sem recorrer 
 - Alojaria as fontes localmente para diminuir dependências externas e melhorar o desempenho.
 - Ligaria o formulário a um serviço real de envio, mantendo as credenciais fora do JavaScript do navegador.
 
-## Estrutura do projeto
+### Estrutura do projeto
 
 ```text
 ClaraContabilidadeLda/
 ├── index.html
+├── README.md
+├── links.txt
 ├── css/
 │   └── style.css
 ├── js/
 │   └── main.js
-└── Logo/
-    ├── C.png
-    ├── C.svg
-    ├── Cbranco.png
-    ├── Cbranco.svg
-    ├── Cpreto.png
-    ├── Cpreto.svg
-    ├── Ctransparente.png
-    ├── Ctransparente.svg
-    ├── Cbrancomini.png
-    └── favicon512x512.png
+├── Logo/
+├── Instagram-post/
+├── Moodboard/
+└── testes/
 ```
 
 ### Testes
