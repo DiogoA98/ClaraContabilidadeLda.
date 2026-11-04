@@ -413,13 +413,6 @@ h1 {
     border-bottom: 1px solid var(--color-primary-dark);
 }
 
-.service-number {
-    color: var(--color-accent-dark);
-    font-size: 0.9rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-}
-
 .service-content {
     min-width: 0;
 }
