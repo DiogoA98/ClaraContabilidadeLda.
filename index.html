@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <meta
         name="viewport"
@@ -67,23 +69,46 @@
             </a>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-            <img src="Logo/favicon512x512.png" alt="" width="512" height="512">
-        </div>
+       <figure class="hero-visual">
+    <img
+        src="Logo/equipa-hero.avif"
+        alt="Três profissionais reunidos num espaço de trabalho partilhado"
+        width="1200"
+        height="900"
+    >
+</figure>
+
     </div>
 </section>
 
         <section id="para-quem" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="section-label">Para quem é</p>
+    <div class="container">
+        <div class="section-feature">
+            <div class="section-heading">
+                <p class="section-label">Para quem é</p>
 
-                    <h2>Três situações. A mesma forma de trabalhar.</h2>
-                </div>
+                <h2>Três situações. A mesma forma de trabalhar.</h2>
 
-                <div class="cards-grid">
+                <p class="section-description">
+                    Acompanhamos quem trabalha por conta própria
+                    e quer perceber as suas contas sem complicações.
+                </p>
+            </div>
+
+            <figure class="section-image">
+                <img
+                    src="Logo/freelancer.avif"
+                    alt="Profissional independente a trabalhar ao computador"
+                    width="900"
+                    height="650"
+                    loading="lazy"
+                >
+            </figure>
+        </div>
+
+        <div class="cards-grid">
                     <article class="card">
-                        <p class="card-number" aria-hidden="true">01</p>
+                        
 
                         <h3>Freelancer a começar</h3>
 
@@ -95,7 +120,7 @@
                     </article>
 
                     <article class="card">
-                        <p class="card-number" aria-hidden="true">02</p>
+                        
 
                         <h3>Independente estabelecido</h3>
 
@@ -107,7 +132,7 @@
                     </article>
 
                     <article class="card">
-                        <p class="card-number" aria-hidden="true">03</p>
+                        
 
                         <h3>Pequena sociedade</h3>
 
@@ -122,41 +147,98 @@
         </section>
 
         <section id="incluido" class="section section-dark">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="section-label">O que está incluído</p>
+    <div class="container included-layout">
 
-                    <h2>Em todos os planos. Sem extras.</h2>
-                </div>
+        <div class="included-intro">
+            <p class="section-label">O que está incluído</p>
 
-                <ul class="services-list">
-                    <li>
-                        Abertura de atividade e enquadramento fiscal
-                    </li>
+            <h2>Tudo tratado. Sem extras escondidos.</h2>
 
-                    <li>
-                        Emissão e controlo de faturas
-                    </li>
+            <p class="section-description">
+                Do início da atividade às obrigações fiscais, sabes sempre
+                o que está a ser tratado e com quem estás a falar.
+            </p>
 
-                    <li>
-                        IVA trimestral tratado do princípio ao fim
-                    </li>
+            <div class="included-highlight">
+                <strong>Um acompanhamento realmente próximo.</strong>
 
-                    <li>
-                        IRS e IRC entregues dentro do prazo
-                    </li>
-
-                    <li>
-                        Segurança Social e declarações trimestrais
-                    </li>
-
-                    <li>
-                        Um contabilista certificado só para ti, com nome,
-                        email e telefone direto
-                    </li>
-                </ul>
+                <p>
+                    Tens contacto direto com um contabilista certificado
+                    que conhece a tua situação.
+                </p>
             </div>
-        </section>
+        </div>
+
+        <ul class="services-list">
+    <li>
+        <div class="service-content">
+            <h3>Começar sem complicações</h3>
+
+            <p>
+                Abertura de atividade e enquadramento fiscal
+                adequado à tua situação.
+            </p>
+        </div>
+    </li>
+
+    <li>
+        <div class="service-content">
+            <h3>Faturação organizada</h3>
+
+            <p>
+                Emissão e controlo das tuas faturas ao longo
+                do mês.
+            </p>
+        </div>
+    </li>
+
+    <li>
+        <div class="service-content">
+            <h3>IVA tratado</h3>
+
+            <p>
+                Declaração trimestral acompanhada do princípio
+                ao fim.
+            </p>
+        </div>
+    </li>
+
+    <li>
+        <div class="service-content">
+            <h3>Obrigações anuais</h3>
+
+            <p>
+                IRS ou IRC preparados e entregues dentro
+                do prazo.
+            </p>
+        </div>
+    </li>
+
+    <li>
+        <div class="service-content">
+            <h3>Segurança Social</h3>
+
+            <p>
+                Acompanhamento das declarações trimestrais
+                e respetivos prazos.
+            </p>
+        </div>
+    </li>
+
+    <li>
+        <div class="service-content">
+            <h3>Uma pessoa que conhece o teu caso</h3>
+
+            <p>
+                Contacto direto com um contabilista certificado,
+                por email ou telefone.
+            </p>
+        </div>
+    </li>
+</ul>
+
+    </div>
+</section>
 
         <section id="precos" class="section">
             <div class="container">
@@ -249,18 +331,114 @@
                 </ol>
             </div>
         </section>
+
+        <section class="section clara-section" aria-labelledby="clara-title">
+    <div class="container clara-content">
+        <figure class="clara-image">
+            <img
+                src="Logo/clara.avif"
+                alt="Profissional da CLARA"
+                width="900"
+                height="1100"
+                loading="lazy"
+            >
+        </figure>
+
+        <div class="clara-text">
+            <p class="section-label">Uma contabilidade mais próxima</p>
+
+            <blockquote class="clara-quote">
+                <p id="clara-title">
+                    “Acreditamos que perceber as tuas contas não devia ser
+                    complicado. Explicamos tudo de forma simples, para
+                    poderes decidir com confiança.”
+                </p>
+
+                <footer>
+                    <strong>Clara</strong>
+                    <span>A voz de uma contabilidade mais simples e próxima</span>
+                </footer>
+            </blockquote>
+
+            <a href="#contacto" class="button">
+                Vamos falar
+            </a>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer class="site-footer" id="contacto">
     <div class="container">
 
         <div class="footer-intro">
-            <p class="section-label">Contacto</p>
-            <h2>Fala connosco</h2>
-            <p>
-                Responde-te uma pessoa, até ao fim do dia útil seguinte.
-            </p>
+    <p class="section-label">Contacto</p>
+
+    <h2>Fala connosco</h2>
+
+    <p>
+        Responde-te uma pessoa, até ao fim do dia útil seguinte.
+    </p>
+
+    <div class="contact-team">
+    <article class="contact-person">
+        <img
+            src="Logo/marta.avif"
+            alt=""
+            width="80"
+            height="80"
+        >
+
+        <div class="contact-person-info">
+            <strong>Marta Lopes</strong>
+            <span>Contabilista certificada</span>
+
+            <a href="tel:+351210000000">
+                +351 210 000 000
+            </a>
         </div>
+    </article>
+
+    <article class="contact-person">
+        <img
+            src="Logo/tiago.avif"
+            alt=""
+            width="80"
+            height="80"
+            loading="lazy"
+        >
+
+        <div class="contact-person-info">
+            <strong>Tiago Martins</strong>
+            <span>Apoio a trabalhadores independentes</span>
+
+            <a href="tel:+351210000001">
+                +351 210 000 001
+            </a>
+        </div>
+    </article>
+
+    <article class="contact-person">
+        <img
+            src="Logo/ines.avif"
+            alt=""
+            width="80"
+            height="80"
+            loading="lazy"
+        >
+
+        <div class="contact-person-info">
+            <strong>Inês Ferreira</strong>
+            <span>Apoio a pequenas empresas</span>
+
+            <a href="tel:+351210000002">
+                +351 210 000 002
+            </a>
+        </div>
+    </article>
+</div>
+</div>
 
         <form class="contact-form" id="contact-form" novalidate>
 
