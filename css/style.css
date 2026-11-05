@@ -934,9 +934,17 @@ textarea.invalid {
         grid-template-columns: 1fr;
     }
 
-    .hero-visual img {
-        width: min(70vw, 340px);
-    }
+    .hero-visual {
+    width: min(100%, 600px);
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 
     .section-feature {
         grid-template-columns: 1fr;
@@ -1041,9 +1049,19 @@ textarea.invalid {
         gap: 3rem;
     }
 
-    .hero-visual img {
-        width: min(78vw, 290px);
-    }
+    .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 
     h1 {
         font-size: clamp(3rem, 16vw, 5rem);
