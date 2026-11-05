@@ -13,6 +13,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const menuToggle = document.querySelector("#menu-toggle");
+const mainNav = document.querySelector("#main-nav");
+
+function closeMenu() {
+    if (!menuToggle || !mainNav) {
+        return;
+    }
+
+    menuToggle.setAttribute("aria-expanded", "false");
+    mainNav.classList.remove("is-open");
+}
+
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+        const menuIsOpen =
+            menuToggle.getAttribute("aria-expanded") === "true";
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(!menuIsOpen)
+        );
+
+        mainNav.classList.toggle("is-open", !menuIsOpen);
+    });
+
+    mainNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            closeMenu();
+        });
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 850) {
+            closeMenu();
+        }
+    });
+}
+
     const form = document.querySelector("#contact-form");
     const formStatus = document.querySelector("#form-status");
 
