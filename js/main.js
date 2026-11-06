@@ -36,6 +36,10 @@ if (menuToggle && mainNav) {
         );
 
         mainNav.classList.toggle("is-open", !menuIsOpen);
+
+if (menuIsOpen) {
+    menuToggle.focus();
+    }
     });
 
     mainNav.querySelectorAll("a").forEach((link) => {
@@ -50,6 +54,14 @@ if (menuToggle && mainNav) {
         }
     });
 }
+
+const placeholderLinks = document.querySelectorAll('a[href="#"]');
+
+placeholderLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+});
 
     const form = document.querySelector("#contact-form");
     const formStatus = document.querySelector("#form-status");
@@ -169,8 +181,8 @@ if (menuToggle && mainNav) {
         }
 
         formStatus.textContent =
-            "Mensagem enviada. Respondemos até ao fim do dia útil seguinte.";
+            "Formulário validado. Este é um projeto demonstrativo e a mensagem não foi enviada.";
 
         form.reset();
-    });
+        });
 });
