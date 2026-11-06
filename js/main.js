@@ -181,7 +181,7 @@ placeholderLinks.forEach((link) => {
         }
 
         formStatus.textContent =
-            "Formulário validado. Este é um projeto demonstrativo e a mensagem não foi enviada.";
+            "Formulário validado. Por ser um projeto demonstrativo, a mensagem não foi enviada.";
 
         form.reset();
         });
