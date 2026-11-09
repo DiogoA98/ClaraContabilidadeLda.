@@ -184,5 +184,8 @@ placeholderLinks.forEach((link) => {
             "Formulário validado. Por ser um projeto demonstrativo, a mensagem não foi enviada.";
 
         form.reset();
+        fields.forEach((field) => {
+    clearError(field);
+});
         });
 });
