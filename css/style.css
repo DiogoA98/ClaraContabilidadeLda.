@@ -624,7 +624,7 @@ h1 {
     margin: 0 0 2.5rem;
 }
 
-.clara-quote > p {
+.clara-quote > h2 {
     margin-bottom: 2rem;
     color: var(--color-primary-dark);
     font-family: var(--font-display);
@@ -715,7 +715,8 @@ h1 {
     align-items: flex-start;
 }
 
-.contact-person-info strong {
+.contact-person-info h3 {
+    margin: 0;
     color: var(--color-surface);
     font-size: 1.1rem;
 }
@@ -1058,7 +1059,7 @@ textarea.invalid {
         width: min(100%, 600px);
     }
 
-    .clara-quote > p {
+    .clara-quote > h2 {
         max-width: 720px;
     }
 
@@ -1240,7 +1241,7 @@ textarea.invalid {
     width: 100%;
 }
 
-.clara-quote > p {
+.clara-quote > h2 {
     font-size: clamp(1.8rem, 9vw, 2.6rem);
 }
 
