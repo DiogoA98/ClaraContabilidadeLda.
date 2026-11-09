@@ -662,7 +662,12 @@ h1 {
 }
 
 .site-footer .section-label {
-    color: var(--color-hover);
+    background-color: var(--color-hover);
+    color: var(--color-primary-dark);
+}
+
+.site-footer h2 {
+    color: var(--color-surface);
 }
 
 .contact-layout {
@@ -840,7 +845,7 @@ textarea.invalid {
 }
 
 .footer-logo {
-    width: min(100%, 420px);
+    width: min(100%, 360px);
     height: auto;
     object-fit: contain;
 }
@@ -1085,7 +1090,7 @@ textarea.invalid {
 }
 
     .footer-logo {
-        width: min(100%, 380px);
+        width: min(100%, 360px);
     }
 
     .footer-tagline {
