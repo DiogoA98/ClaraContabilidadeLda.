@@ -211,15 +211,40 @@ textarea:focus-visible {
 }
 
 .hero {
+    position: relative;
     display: grid;
+    overflow: hidden;
     min-height: 78vh;
     align-items: center;
-    padding-block: clamp(5rem, 12vw, 10rem);
+    padding-block: clamp(4rem, 8vw, 7rem);
+    background-color: var(--color-background);
+    isolation: isolate;
+}
+
+.hero::after {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    bottom: -25%;
+    z-index: -1;
+    width: 48%;
+    background: linear-gradient(
+    145deg,
+    #805f79 ,
+    rgb(227, 192, 219) ,
+    #623f5c 
+);
+    content: "";
+    transform: skewX(-18deg);
+    transform-origin: bottom right;
+    pointer-events: none;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
     gap: clamp(2.5rem, 5vw, 5rem);
     align-items: center;
 }
@@ -230,14 +255,63 @@ textarea:focus-visible {
 
 .hero-visual {
     position: relative;
-    overflow: hidden;
+    display: flex;
+    min-height: 620px;
+    align-items: flex-end;
+    justify-content: flex-end;
     margin: 0;
-    border-radius: 28px;
+    isolation: isolate;
 }
 
+.hero-visual::before {
+    position: absolute;
+    top: 12%;
+    right: -4%;
+    bottom: 10%;
+    left: 14%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgb(244 184 170 / 10%) 0%,
+        rgb(234 221 232 / 8%) 48%,
+        transparent 72%
+    );
+    content: "";
+    filter: blur(20px);
+}
+
+
 .hero-visual img {
-    width: 100%;
+    position: relative;
+    z-index: 1;
+    width: min(100%, 540px);
     height: auto;
+    max-height: 680px;
+    margin-left: auto;
+    object-fit: contain;
+    object-position: right bottom;
+    filter: drop-shadow(
+        0 14px 20px rgb(98 63 92 / 7%)
+    );
+
+    -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 78%,
+    rgb(0 0 0 / 90%) 84%,
+    rgb(0 0 0 / 55%) 92%,
+    transparent 100%
+);
+
+mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 78%,
+    rgb(0 0 0 / 90%) 84%,
+    rgb(0 0 0 / 55%) 92%,
+    transparent 100%
+);
 }
 
 
@@ -276,10 +350,10 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 0.9rem 1.5rem;
-    border: 2px solid var(--color-primary-dark);
+    border: 2px solid var(--color-background);
     border-radius: 999px;
-    background-color: var(--color-hover);
-    color: var(--color-primary-dark);
+    background-color: var(--color-primary-dark);
+    color: var(--color-background);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
