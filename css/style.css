@@ -224,10 +224,10 @@ textarea:focus-visible {
 .hero::after {
     position: absolute;
     top: 0%;
-    right: 5%;
+    right: 4.5%;
     bottom: -25%;
     z-index: -1;
-    width: 48%;
+    width: 60%;
     background: linear-gradient(
     145deg,
     #805f79 ,
