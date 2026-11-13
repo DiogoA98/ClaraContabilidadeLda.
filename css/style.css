@@ -318,6 +318,26 @@ h1 {
     letter-spacing: -0.035em;
 }
 
+.hero-brand-word {
+    position: relative;
+    display: inline-block;
+    padding: 0.02em 0.2em 0.08em;
+    border-radius: 0.18em;
+    background: linear-gradient(
+        135deg,
+        var(--color-primary-dark),
+        var(--color-primary)
+    );
+    box-shadow:
+        0 0.08em 0 var(--color-hover),
+        0 0.14em 0.28em rgb(98 63 92 / 16%);
+    color: var(--color-surface);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+    transform: rotate(-1.5deg);
+}
+
 .hero-description {
     max-width: 620px;
     margin-bottom: 2rem;
