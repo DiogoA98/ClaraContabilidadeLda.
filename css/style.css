@@ -221,6 +221,24 @@ textarea:focus-visible {
     isolation: isolate;
 }
 
+.hero::before {
+    position: absolute;
+    top: -180px;
+    left: -180px;
+    z-index: -1;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgb(244 184 170 / 22%) 0%,
+        rgb(234 221 232 / 14%) 38%,
+        transparent 72%
+    );
+    content: "";
+    pointer-events: none;
+}
+
 .hero::after {
     position: absolute;
     top: 0%;
@@ -355,6 +373,7 @@ h1 {
     border-radius: 999px;
     background-color: var(--color-primary-dark);
     color: var(--color-background);
+    box-shadow: 0 12px 28px rgb(98 63 92 / 22%);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
@@ -366,6 +385,9 @@ h1 {
 }
 
 .button:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    box-shadow: 0 16px 34px rgb(98 63 92 / 30%);
     transform: translateY(-2px);
 }
 
@@ -604,6 +626,24 @@ h1 {
     object-fit: cover;
 }
 
+.section-image,
+.included-image,
+.steps-image {
+    box-shadow: 0 24px 55px rgb(98 63 92 / 12%);
+}
+
+.section-image img,
+.included-image img,
+.steps-image img {
+    transition: transform 500ms ease;
+}
+
+.section-image:hover img,
+.included-image:hover img,
+.steps-image:hover img {
+    transform: scale(1.025);
+}
+
 .included-highlight {
     position: relative;
     max-width: 520px;
@@ -676,8 +716,8 @@ h1 {
     padding: 0;
     border: 2px solid var(--color-primary);
     border-radius: var(--radius-large);
-    background-color: transparent;
-    box-shadow: none;
+    background-color: rgb(255 255 255 / 38%);
+    box-shadow: 0 18px 45px rgb(98 63 92 / 7%);
     transition:
         border-color 180ms ease,
         transform 180ms ease;
@@ -685,6 +725,7 @@ h1 {
 
 .price-card:hover {
     border-color: var(--color-primary-dark);
+    box-shadow: 0 24px 55px rgb(98 63 92 / 13%);
     transform: translateY(-4px);
 }
 
