@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <meta
         name="viewport"
@@ -182,13 +182,23 @@
         </div>
 
        <figure class="hero-visual">
+    <picture>
+        <source
+            media="(max-width: 600px)"
+            srcset="Logo/capa1-400.webp"
+            type="image/webp">
 
-    <img
-        src="Logo/capa1.png"
-        alt="Profissional"
-        width="680"
-        height="1024">
+        <source
+            srcset="Logo/capa1-680.webp"
+            type="image/webp">
 
+        <img
+            src="Logo/capa1.png"
+            alt="Profissional"
+            width="680"
+            height="1020"
+            fetchpriority="high">
+    </picture>
 </figure>
 
     </div>
@@ -534,14 +544,15 @@
     <div class="container clara-content">
         <figure class="clara-image">
             <div class="clara-image-frame">
-                <img
-                    src="Logo/clara.avif"
-                    alt="Profissional da CLARA"
-                    width="900"
-                    height="1100"
-                    loading="lazy"
-                >
-            </div>
+    <img
+        src="Logo/clara.avif"
+        alt="Profissional da CLARA"
+        width="900"
+        height="1100"
+        loading="lazy"
+    >
+</div>
+
 
             <figcaption class="clara-person">
                 <strong>Clara</strong>
@@ -554,8 +565,9 @@
                 Uma contabilidade mais próxima
             </p>
 
-            <div
+   <div
     class="clara-carousel"
+    role="region"
     aria-roledescription="carrossel"
     aria-label="Princípios da CLARA"
 >
@@ -674,14 +686,14 @@
     </div>
 
     <figure class="contact-heading-visual" aria-hidden="true">
-        <img
-            src="Logo/capa1.png"
-            alt=""
-            width="680"
-            height="1024"
-            loading="lazy"
-        >
-    </figure>
+    <img
+        src="Logo/capa1-400.webp"
+        alt=""
+        width="400"
+        height="600"
+        loading="lazy"
+    >
+</figure>
 </div>
 
 <div class="contact-layout">
