@@ -63,6 +63,59 @@ placeholderLinks.forEach((link) => {
     });
 });
 
+const claraSlides = Array.from(
+    document.querySelectorAll("[data-clara-slide]")
+);
+
+const claraSlider = document.querySelector(
+    "[data-clara-slider]"
+);
+
+const claraStatus = document.querySelector(
+    "[data-clara-status]"
+);
+
+function showClaraSlide(index) {
+    if (claraSlides.length === 0) {
+        return;
+    }
+
+    const safeIndex = Math.max(
+        0,
+        Math.min(index, claraSlides.length - 1)
+    );
+
+    claraSlides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === safeIndex;
+
+        slide.hidden = !isActive;
+        slide.classList.toggle("is-active", isActive);
+    });
+
+    if (claraSlider) {
+        claraSlider.value = String(safeIndex);
+        claraSlider.setAttribute(
+            "aria-valuetext",
+            `Mensagem ${safeIndex + 1} de ${claraSlides.length}`
+        );
+    }
+
+    if (claraStatus) {
+        claraStatus.textContent =
+            `${safeIndex + 1} / ${claraSlides.length}`;
+    }
+}
+
+if (claraSlides.length > 0 && claraSlider) {
+    claraSlider.max = String(claraSlides.length - 1);
+
+    claraSlider.addEventListener("input", () => {
+        showClaraSlide(Number(claraSlider.value));
+    });
+
+    showClaraSlide(0);
+}
+
     const form = document.querySelector("#contact-form");
     const formStatus = document.querySelector("#form-status");
 
