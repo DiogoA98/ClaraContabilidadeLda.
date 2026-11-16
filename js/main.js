@@ -4,15 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const logoHome = document.querySelector("#logo-home");
 
-    if (logoHome) {
-        logoHome.addEventListener("click", () => {
-        window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
-
     const menuToggle = document.querySelector("#menu-toggle");
 const mainNav = document.querySelector("#main-nav");
 
@@ -54,6 +45,101 @@ if (menuIsOpen) {
         }
     });
 }
+
+const navigationLinks = Array.from(
+    document.querySelectorAll('.main-nav a[href^="#"]')
+);
+
+const navigationSections = navigationLinks
+    .map((link) => {
+        return document.querySelector(link.getAttribute("href"));
+    })
+    .filter(Boolean);
+    let isReturningToTop = false;
+
+function setActiveNavigation(sectionId) {
+    navigationLinks.forEach((link) => {
+        const isActive =
+            link.getAttribute("href") === `#${sectionId}`;
+
+        link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+            link.setAttribute("aria-current", "location");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+function clearActiveNavigation() {
+    navigationLinks.forEach((link) => {
+        link.classList.remove("is-active");
+        link.removeAttribute("aria-current");
+    });
+}
+
+if (logoHome) {
+    logoHome.addEventListener("click", () => {
+        isReturningToTop = true;
+        clearActiveNavigation();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+if (
+    navigationLinks.length > 0 &&
+    navigationSections.length > 0 &&
+    "IntersectionObserver" in window
+) {
+    const navigationObserver = new IntersectionObserver(
+        (entries) => {
+            const visibleSections = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((firstEntry, secondEntry) => {
+                    return (
+                        secondEntry.intersectionRatio -
+                        firstEntry.intersectionRatio
+                    );
+                });
+
+            if (!isReturningToTop && visibleSections.length > 0) {
+    setActiveNavigation(
+        visibleSections[0].target.id
+    );
+}
+        },
+        {
+            rootMargin: "-25% 0px -55% 0px",
+            threshold: [0, 0.1, 0.25, 0.5]
+        }
+    );
+
+    navigationSections.forEach((section) => {
+        navigationObserver.observe(section);
+    });
+
+        navigationLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            const sectionId = link
+                .getAttribute("href")
+                .slice(1);
+
+            setActiveNavigation(sectionId);
+        });
+    });
+}
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY <= 10) {
+        isReturningToTop = false;
+        clearActiveNavigation();
+    }
+});
 
 const placeholderLinks = document.querySelectorAll('a[href="#"]');
 
