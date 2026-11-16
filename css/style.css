@@ -281,6 +281,13 @@ textarea:focus-visible {
     isolation: isolate;
 }
 
+.hero-visual picture {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 .hero-visual img {
     position: relative;
     z-index: 1;
@@ -1666,6 +1673,10 @@ textarea.invalid {
     width: min(100%, 600px);
     min-height: 520px;
     margin-inline: auto;
+    justify-content: center;
+}
+
+.hero-visual picture {
     justify-content: center;
 }
 
