@@ -1030,6 +1030,18 @@ h1 {
     object-fit: cover;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 .clara-person {
     position: absolute;
     right: 0;
@@ -1059,9 +1071,119 @@ h1 {
     min-width: 0;
 }
 
-.clara-quote {
+.clara-carousel {
     position: relative;
-    margin: 0 0 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.clara-slides {
+    display: grid;
+}
+
+.clara-quote {
+    grid-area: 1 / 1;
+    margin: 0;
+    animation: clara-slide-in 320ms ease;
+}
+
+.clara-quote[hidden] {
+    display: none;
+}
+
+.clara-carousel-controls {
+    display: flex;
+    max-width: 520px;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.clara-carousel-slider {
+    width: 100%;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: grab;
+    appearance: none;
+    -webkit-appearance: none;
+    touch-action: pan-y;
+}
+
+.clara-carousel-slider:active {
+    cursor: grabbing;
+}
+
+.clara-carousel-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+}
+
+.clara-carousel-slider::-webkit-slider-thumb {
+    width: 54px;
+    height: 8px;
+    margin-top: -3px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 10px rgb(98 63 92 / 18%);
+    cursor: grab;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.clara-carousel-slider:active::-webkit-slider-thumb {
+    cursor: grabbing;
+}
+
+.clara-carousel-slider::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+}
+
+.clara-carousel-slider::-moz-range-thumb {
+    width: 54px;
+    height: 8px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 10px rgb(98 63 92 / 18%);
+    cursor: grab;
+}
+
+.clara-carousel-slider:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 5px;
+    border-radius: 999px;
+}
+
+.clara-carousel-status {
+    flex: 0 0 auto;
+    min-width: 38px;
+    margin: 0;
+    color: var(--color-primary-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+@keyframes clara-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .clara-quote-mark {
@@ -1091,18 +1213,8 @@ h1 {
     display: flex;
     max-width: 520px;
     flex-direction: column;
-    padding: 1.25rem 0 0;
-    border-top: 2px solid var(--color-primary);
-}
-
-.clara-quote footer::before {
-    width: 42px;
-    height: 7px;
-    margin-top: -1.55rem;
-    margin-bottom: 1.1rem;
-    border-radius: 999px;
-    background-color: var(--color-primary-dark);
-    content: "";
+    padding-top: 1.25rem;
+    border-top: 0;
 }
 
 .clara-quote strong {
