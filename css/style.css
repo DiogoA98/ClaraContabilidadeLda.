@@ -1124,7 +1124,6 @@ h1 {
     display: flex;
     max-width: 520px;
     align-items: center;
-    gap: 1rem;
     margin-top: 1rem;
 }
 
@@ -1164,6 +1163,16 @@ h1 {
     cursor: grab;
     appearance: none;
     -webkit-appearance: none;
+    transition:
+        background-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.clara-carousel-slider:hover::-webkit-slider-thumb {
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 14px rgb(98 63 92 / 28%);
+    transform: scaleY(1.25);
 }
 
 .clara-carousel-slider:active::-webkit-slider-thumb {
@@ -1186,22 +1195,22 @@ h1 {
     background-color: var(--color-primary-dark);
     box-shadow: 0 4px 10px rgb(98 63 92 / 18%);
     cursor: grab;
+    transition:
+        background-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.clara-carousel-slider:hover::-moz-range-thumb {
+    background-color: var(--color-primary);
+    box-shadow: 0 6px 14px rgb(98 63 92 / 28%);
+    transform: scaleY(1.25);
 }
 
 .clara-carousel-slider:focus-visible {
     outline: 3px solid var(--color-primary-dark);
     outline-offset: 5px;
     border-radius: 999px;
-}
-
-.clara-carousel-status {
-    flex: 0 0 auto;
-    min-width: 38px;
-    margin: 0;
-    color: var(--color-primary-dark);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
 }
 
 @keyframes clara-slide-in {
@@ -1743,10 +1752,10 @@ textarea.invalid {
     object-fit: cover;
 }
 
-    .cards-grid,
-    .pricing-grid {
+.cards-grid,
+.pricing-grid {
         grid-template-columns: 1fr;
-    }
+}
 
  .price-card h3,
 .price-description {
@@ -1754,16 +1763,16 @@ textarea.invalid {
 }
 
 
-    .section-feature {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
+.section-feature {
+     grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
 
-    .section-image {
-        width: 100%;
-    }
+.section-image {
+    width: 100%;
+}
 
-    .included-layout {
+.included-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
 }
@@ -1776,15 +1785,15 @@ textarea.invalid {
     max-width: 14ch;
 }
 
-    .contact-team {
-        grid-template-columns: 1fr;
-    }
+.contact-team {
+    grid-template-columns: 1fr;
+}
 
-    .contact-person {
-        width: 100%;
-    }
+.contact-person {
+    width: 100%;
+}
 
-    .clara-content {
+.clara-content {
     grid-template-columns: 1fr;
     gap: 4rem;
 }
@@ -1802,19 +1811,19 @@ textarea.invalid {
     width: min(100%, 720px);
 }
 
-    .footer-brand-panel {
-        margin-top: 0;
-        padding-block: 2rem;
-    }
+.footer-brand-panel {
+    margin-top: 0;
+    padding-block: 2rem;
+}
 
-    .footer-brand-intro {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
+.footer-brand-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-    .contact-layout {
+.contact-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
 }
@@ -1839,24 +1848,24 @@ textarea.invalid {
     grid-template-columns: 1fr;
 }
 
-    .footer-logo {
-        width: min(100%, 360px);
-    }
+.footer-logo {
+    width: min(100%, 360px);
+}
 
-    .footer-tagline {
-        max-width: 700px;
-        font-size: clamp(2rem, 7vw, 3.5rem);
-        text-align: left;
-    }
+.footer-tagline {
+    max-width: 700px;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    text-align: left;
+}
 
-    .footer-links-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3rem 2rem;
-    }
+.footer-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+}
 
-    .footer-links-grid .footer-column:last-child {
-        grid-column: 1 / -1;
-    }
+.footer-links-grid .footer-column:last-child {
+    grid-column: 1 / -1;
+}
 }
 
 @media (max-width: 600px) {
