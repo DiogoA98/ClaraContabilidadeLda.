@@ -173,6 +173,59 @@ placeholderLinks.forEach((link) => {
     });
 });
 
+const stepsList = document.querySelector(".steps-list");
+let stepsProgressTimer = null;
+
+function updateStepsProgress() {
+    if (!stepsList) {
+        return;
+    }
+
+    const stepsRect = stepsList.getBoundingClientRect();
+    const progressStart = window.innerHeight * 0.75;
+    const progressEnd = window.innerHeight * 0.35;
+    const progressDistance =
+        stepsRect.height + progressStart - progressEnd;
+
+    const progress = Math.min(
+        1,
+        Math.max(
+            0,
+            (progressStart - stepsRect.top) / progressDistance
+        )
+    );
+
+    stepsList.style.setProperty(
+        "--steps-progress",
+        progress.toFixed(3)
+    );
+}
+
+function scheduleStepsProgressUpdate() {
+    if (stepsProgressTimer !== null) {
+        return;
+    }
+
+    stepsProgressTimer = window.setTimeout(() => {
+        updateStepsProgress();
+        stepsProgressTimer = null;
+    }, 20);
+}
+
+if (stepsList) {
+    updateStepsProgress();
+
+    window.addEventListener(
+        "scroll",
+        scheduleStepsProgressUpdate
+    );
+
+    window.addEventListener(
+        "resize",
+        scheduleStepsProgressUpdate
+    );
+}
+
 const claraSlides = Array.from(
     document.querySelectorAll("[data-clara-slide]")
 );
