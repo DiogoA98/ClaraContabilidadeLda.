@@ -157,10 +157,6 @@ const claraSlider = document.querySelector(
     "[data-clara-slider]"
 );
 
-const claraStatus = document.querySelector(
-    "[data-clara-status]"
-);
-
 function showClaraSlide(index) {
     if (claraSlides.length === 0) {
         return;
@@ -184,11 +180,6 @@ function showClaraSlide(index) {
             "aria-valuetext",
             `Mensagem ${safeIndex + 1} de ${claraSlides.length}`
         );
-    }
-
-    if (claraStatus) {
-        claraStatus.textContent =
-            `${safeIndex + 1} / ${claraSlides.length}`;
     }
 }
 
