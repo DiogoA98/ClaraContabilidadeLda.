@@ -1094,21 +1094,69 @@ h1 {
     right: 0;
     bottom: 0;
     display: flex;
-    width: min(86%, 330px);
+    width: min(88%, 350px);
+    overflow: hidden;
     flex-direction: column;
-    padding: 1.25rem 1.5rem;
-    border-radius: var(--radius-medium);
-    background-color: var(--color-primary-dark);
-    box-shadow: 0 16px 35px rgb(98 63 92 / 20%);
+    padding: 1.4rem 1.6rem 1.5rem;
+    border: 1px solid rgb(255 255 255 / 14%);
+    border-radius: 8px var(--radius-medium) var(--radius-medium)
+        var(--radius-medium);
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary-dark),
+            #76506e
+        );
+    box-shadow: 0 18px 40px rgb(98 63 92 / 24%);
     color: var(--color-surface);
+    isolation: isolate;
+}
+
+.clara-person::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        var(--color-hover),
+        var(--color-primary-soft)
+    );
+    content: "";
+}
+
+.clara-person::after {
+    position: absolute;
+    right: -38px;
+    bottom: -48px;
+    z-index: -1;
+    width: 115px;
+    height: 115px;
+    border: 22px solid rgb(244 184 170 / 14%);
+    border-radius: 50%;
+    content: "";
+}
+
+.clara-person-label {
+    margin-bottom: 0.35rem;
+    color: var(--color-hover);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .clara-person strong {
-    font-size: 1.2rem;
+    color: var(--color-surface);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.1;
 }
 
-.clara-person span {
-    margin-top: 0.2rem;
+.clara-person-description {
+    max-width: 25ch;
+    margin-top: 0.5rem;
     color: var(--color-primary-soft);
     line-height: 1.4;
 }
@@ -2112,8 +2160,8 @@ textarea.invalid {
 
 .clara-person {
     right: 0;
-    width: min(92%, 310px);
-    padding: 1rem 1.15rem;
+    width: min(94%, 320px);
+    padding: 1.2rem 1.25rem 1.3rem;
 }
 
 .clara-quote-mark {
