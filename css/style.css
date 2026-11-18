@@ -1178,11 +1178,20 @@ h1 {
 .clara-quote {
     grid-area: 1 / 1;
     margin: 0;
-    animation: clara-slide-in 320ms ease;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .clara-quote[hidden] {
-    display: none;
+    display: block;
+}
+
+.clara-quote.is-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    animation: clara-slide-in 320ms ease;
 }
 
 .clara-carousel-controls {
@@ -1212,19 +1221,27 @@ h1 {
 
 .clara-carousel-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 2px;
+    height: 5px;
     border-radius: 999px;
-    background-color: var(--color-primary);
+    background: linear-gradient(
+        to right,
+        var(--color-primary-dark),
+        var(--color-primary),
+        var(--color-primary-soft)
+    );
+    box-shadow: inset 0 1px 2px rgb(98 63 92 / 14%);
 }
 
 .clara-carousel-slider::-webkit-slider-thumb {
-    width: 54px;
-    height: 8px;
-    margin-top: -3px;
-    border: 0;
-    border-radius: 999px;
+    width: 22px;
+    height: 22px;
+    margin-top: -8.5px;
+    border: 5px solid var(--color-surface);
+    border-radius: 50%;
     background-color: var(--color-primary-dark);
-    box-shadow: 0 4px 10px rgb(98 63 92 / 18%);
+    box-shadow:
+        0 0 0 2px var(--color-primary),
+        0 6px 16px rgb(98 63 92 / 24%);
     cursor: grab;
     appearance: none;
     -webkit-appearance: none;
@@ -1236,29 +1253,40 @@ h1 {
 
 .clara-carousel-slider:hover::-webkit-slider-thumb {
     background-color: var(--color-primary);
-    box-shadow: 0 6px 14px rgb(98 63 92 / 28%);
-    transform: scaleY(1.25);
+    box-shadow:
+        0 0 0 3px rgb(128 95 121 / 24%),
+        0 8px 18px rgb(98 63 92 / 28%);
+    transform: scale(1.08);
 }
 
 .clara-carousel-slider:active::-webkit-slider-thumb {
     cursor: grabbing;
+    transform: scale(0.96);
 }
 
 .clara-carousel-slider::-moz-range-track {
     width: 100%;
-    height: 2px;
+    height: 5px;
     border: 0;
     border-radius: 999px;
-    background-color: var(--color-primary);
+    background: linear-gradient(
+        to right,
+        var(--color-primary-dark),
+        var(--color-primary),
+        var(--color-primary-soft)
+    );
+    box-shadow: inset 0 1px 2px rgb(98 63 92 / 14%);
 }
 
 .clara-carousel-slider::-moz-range-thumb {
-    width: 54px;
-    height: 8px;
-    border: 0;
-    border-radius: 999px;
+    width: 12px;
+    height: 12px;
+    border: 5px solid var(--color-surface);
+    border-radius: 50%;
     background-color: var(--color-primary-dark);
-    box-shadow: 0 4px 10px rgb(98 63 92 / 18%);
+    box-shadow:
+        0 0 0 2px var(--color-primary),
+        0 6px 16px rgb(98 63 92 / 24%);
     cursor: grab;
     transition:
         background-color 180ms ease,
@@ -1268,8 +1296,15 @@ h1 {
 
 .clara-carousel-slider:hover::-moz-range-thumb {
     background-color: var(--color-primary);
-    box-shadow: 0 6px 14px rgb(98 63 92 / 28%);
-    transform: scaleY(1.25);
+    box-shadow:
+        0 0 0 3px rgb(128 95 121 / 24%),
+        0 8px 18px rgb(98 63 92 / 28%);
+    transform: scale(1.08);
+}
+
+.clara-carousel-slider:active::-moz-range-thumb {
+    cursor: grabbing;
+    transform: scale(0.96);
 }
 
 .clara-carousel-slider:focus-visible {
