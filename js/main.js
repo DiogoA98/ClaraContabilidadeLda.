@@ -55,7 +55,9 @@ const navigationSections = navigationLinks
         return document.querySelector(link.getAttribute("href"));
     })
     .filter(Boolean);
-    let isReturningToTop = false;
+
+let isReturningToTop = false;
+let navigationTargetId = null;
 
 function setActiveNavigation(sectionId) {
     navigationLinks.forEach((link) => {
@@ -82,6 +84,7 @@ function clearActiveNavigation() {
 if (logoHome) {
     logoHome.addEventListener("click", () => {
         isReturningToTop = true;
+        navigationTargetId = null;
         clearActiveNavigation();
 
         window.scrollTo({
@@ -97,41 +100,62 @@ if (
     "IntersectionObserver" in window
 ) {
     const navigationObserver = new IntersectionObserver(
-        (entries) => {
-            const visibleSections = entries
-                .filter((entry) => entry.isIntersecting)
-                .sort((firstEntry, secondEntry) => {
-                    return (
-                        secondEntry.intersectionRatio -
-                        firstEntry.intersectionRatio
-                    );
-                });
-
-            if (!isReturningToTop && visibleSections.length > 0) {
-    setActiveNavigation(
-        visibleSections[0].target.id
-    );
-}
-        },
-        {
-            rootMargin: "-25% 0px -55% 0px",
-            threshold: [0, 0.1, 0.25, 0.5]
+    (entries) => {
+        if (isReturningToTop) {
+            return;
         }
-    );
+
+        if (navigationTargetId) {
+            const targetReached = entries.some((entry) => {
+                return (
+                    entry.target.id === navigationTargetId &&
+                    entry.isIntersecting
+                );
+            });
+
+            if (targetReached) {
+                setActiveNavigation(navigationTargetId);
+                navigationTargetId = null;
+            }
+
+            return;
+        }
+
+        const visibleSections = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((firstEntry, secondEntry) => {
+                return (
+                    secondEntry.intersectionRatio -
+                    firstEntry.intersectionRatio
+                );
+            });
+
+        if (visibleSections.length > 0) {
+            setActiveNavigation(
+                visibleSections[0].target.id
+            );
+        }
+    },
+    {
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: [0, 0.1, 0.25, 0.5]
+    }
+);
 
     navigationSections.forEach((section) => {
         navigationObserver.observe(section);
     });
 
         navigationLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            const sectionId = link
-                .getAttribute("href")
-                .slice(1);
+    link.addEventListener("click", () => {
+        const sectionId = link
+            .getAttribute("href")
+            .slice(1);
 
-            setActiveNavigation(sectionId);
-        });
+        navigationTargetId = sectionId;
+        setActiveNavigation(sectionId);
     });
+});
 }
 
 window.addEventListener("scroll", () => {
