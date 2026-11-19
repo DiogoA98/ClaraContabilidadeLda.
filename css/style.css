@@ -209,7 +209,7 @@ textarea:focus-visible {
 .main-nav a::after {
     position: absolute;
     right: 0;
-    bottom: -0.65rem;
+    bottom: -0.10rem;
     left: 0;
     height: 3px;
     border-radius: 999px;
