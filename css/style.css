@@ -246,38 +246,32 @@ textarea:focus-visible {
 
 .hero::before {
     position: absolute;
-    top: -180px;
-    left: -180px;
-    z-index: -1;
-    width: 520px;
-    height: 520px;
+    top: -70px;
+    right: -70px;
+    z-index: 0;
+    width: 165px;
+    height: 165px;
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgb(244 184 170 / 22%) 0%,
-        rgb(234 221 232 / 14%) 38%,
-        transparent 72%
-    );
+    background-color: var(--color-hover);
     content: "";
     pointer-events: none;
 }
 
 .hero::after {
     position: absolute;
-    top: 0%;
-    right: 4.5%;
-    bottom: -25%;
+    top: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
-    width: 58%;
-    background: linear-gradient(
-    145deg,
-    #805f79 ,
-    rgb(227, 192, 219) ,
-    #623f5c 
-);
+    width: 50.5%;
+    background-color: var(--color-primary-soft);
+    clip-path: polygon(
+        34% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
     content: "";
-    transform: skewX(-18deg);
-    transform-origin: bottom right;
     pointer-events: none;
 }
 
@@ -299,9 +293,22 @@ textarea:focus-visible {
     display: flex;
     min-height: 540px;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: 0;
     isolation: isolate;
+}
+
+.hero-visual::before {
+    position: absolute;
+    bottom: -135px;
+    left: -20px;
+    z-index: 0;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: var(--color-hover);
+    content: "";
+    pointer-events: none;
 }
 
 .hero-visual picture {
@@ -313,34 +320,15 @@ textarea:focus-visible {
 
 .hero-visual img {
     position: relative;
+    right: 20px;
+    bottom: -70px;
     z-index: 1;
-    width: min(100%, 540px);
+    width: min(122%, 640px);
     height: auto;
-    max-height: 680px;
-    margin-left: auto;
+    max-height: 760px;
+    margin: 0;
     object-fit: contain;
-    object-position: right bottom;
-    filter: drop-shadow(
-        0 14px 20px rgb(98 63 92 / 7%)
-    );
-
-    -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 78%,
-    rgb(0 0 0 / 90%) 84%,
-    rgb(0 0 0 / 55%) 92%,
-    transparent 100%
-);
-
-mask-image: linear-gradient(
-    to bottom,
-    #000 0%,
-    #000 78%,
-    rgb(0 0 0 / 90%) 84%,
-    rgb(0 0 0 / 55%) 92%,
-    transparent 100%
-);
+    object-position: center bottom;
 }
 
 
@@ -1911,12 +1899,25 @@ textarea.invalid {
     padding-block: 3.5rem 0;
 }
 
+.hero::before {
+    top: auto;
+    right: -70px;
+    bottom: -65px;
+    width: 175px;
+    height: 175px;
+}
+
 .hero::after {
     top: 48%;
-    right: -22%;
-    bottom: -8%;
-    width: 115%;
-    transform: skewX(-12deg);
+    right: 0;
+    bottom: 0;
+    width: 88%;
+    clip-path: polygon(
+        22% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
 }
 
 .hero-content {
@@ -1931,13 +1932,22 @@ textarea.invalid {
     justify-content: center;
 }
 
+.hero-visual::before {
+    bottom: -115px;
+    left: 5%;
+    width: 190px;
+    height: 190px;
+}
+
 .hero-visual picture {
     justify-content: center;
 }
 
 .hero-visual img {
-    width: min(100%, 500px);
-    max-height: 560px;
+    right: 0;
+    bottom: -60px;
+    width: min(110%, 550px);
+    max-height: 640px;
     margin-inline: auto;
     object-position: center bottom;
 }
@@ -2099,12 +2109,24 @@ textarea.invalid {
     padding-block: 3rem 0;
 }
 
+.hero::before {
+    right: -55px;
+    bottom: -45px;
+    width: 135px;
+    height: 135px;
+}
+
 .hero::after {
-    top: 61%;
-    right: -42%;
-    bottom: -4%;
-    width: 145%;
-    transform: skewX(-10deg);
+    top: 60%;
+    right: 0;
+    bottom: 0;
+    width: 94%;
+    clip-path: polygon(
+        18% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
 }
 
 .hero-content {
@@ -2118,10 +2140,19 @@ textarea.invalid {
     justify-content: center;
 }
 
+.hero-visual::before {
+    bottom: -90px;
+    left: 2%;
+    width: 150px;
+    height: 150px;
+}
+
 .hero-visual img {
-    width: min(100%, 390px);
+    right: 0;
+    bottom: -48px;
+    width: min(110%, 430px);
     height: auto;
-    max-height: 450px;
+    max-height: 510px;
     margin-inline: auto;
     object-fit: contain;
     object-position: center bottom;
