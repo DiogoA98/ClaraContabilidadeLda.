@@ -479,6 +479,10 @@ h1 {
     margin-bottom: 4rem;
 }
 
+#precos .section-heading {
+    margin-bottom: 2.5rem;
+}
+
 .section h2,
 .site-footer h2 {
     margin-bottom: 1.5rem;
@@ -707,17 +711,78 @@ h1 {
     transform: scale(1.025);
 }
 
-.included-highlight {
-    position: relative;
-    max-width: 520px;
-    padding-top: 1.25rem;
-    border-top: 2px solid var(--color-primary);
+.month-example {
+    min-width: 0;
+    padding-top: 0.25rem;
 }
 
-.included-highlight::before {
+.month-example-heading {
+    max-width: 620px;
+    margin-bottom: 2.25rem;
+}
+
+.month-example-label {
+    width: fit-content;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.month-example-heading h3 {
+    margin-bottom: 0.75rem;
+    color: var(--color-primary-dark);
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    line-height: 1.1;
+}
+
+.month-example-heading > p:last-child {
+    max-width: 580px;
+    margin-bottom: 0;
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.month-timeline {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.month-timeline::before {
     position: absolute;
-    top: -7px;
-    left: 0;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    left: 8.6rem;
+    width: 2px;
+    background-color: rgb(98 63 92 / 24%);
+    content: "";
+}
+
+.month-timeline li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 3rem;
+    min-width: 0;
+    padding: 0 0 2rem;
+}
+
+.month-timeline li:last-child {
+    padding-bottom: 0;
+}
+
+.month-timeline li::before {
+    position: absolute;
+    top: 0.45rem;
+    left: calc(8.6rem - 6px);
+    z-index: 1;
     width: 12px;
     height: 12px;
     border: 3px solid var(--color-primary-soft);
@@ -726,83 +791,33 @@ h1 {
     content: "";
 }
 
-.included-highlight strong {
+.month-period {
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.month-timeline li > div {
+    min-width: 0;
+}
+
+.month-timeline strong {
     display: block;
-    max-width: 18ch;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.35rem;
     color: var(--color-primary-dark);
-    font-size: clamp(1.25rem, 2vw, 1.55rem);
-    line-height: 1.2;
+    font-size: 1.2rem;
+    line-height: 1.25;
 }
 
-.included-highlight p {
-    max-width: 440px;
+.month-timeline p {
+    max-width: 520px;
     margin: 0;
-    color: var(--color-text-muted);
-}
-
-.services-list {
-    display: grid;
-    gap: 0.85rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.services-list li {
-    position: relative;
-    min-width: 0;
-    padding: 1.6rem 1.75rem 1.6rem 4.25rem;
-    border: 1px solid rgb(98 63 92 / 14%);
-    border-radius: var(--radius-medium);
-    background-color: rgb(255 255 255 / 58%);
-    box-shadow: 0 12px 30px rgb(98 63 92 / 5%);
-    transition:
-        border-color 180ms ease,
-        background-color 180ms ease,
-        box-shadow 180ms ease,
-        transform 180ms ease;
-}
-
-.services-list li::before {
-    position: absolute;
-    top: 1.75rem;
-    left: 1.6rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 4px solid var(--color-primary-soft);
-    border-radius: 50%;
-    background-color: var(--color-primary-dark);
-    box-shadow: 0 5px 14px rgb(98 63 92 / 22%);
-    content: "";
-}
-
-.services-list li:hover {
-    border-color: rgb(98 63 92 / 30%);
-    background-color: rgb(255 255 255 / 82%);
-    box-shadow: 0 18px 38px rgb(98 63 92 / 10%);
-    transform: translateX(6px);
-}
-
-.services-list li:hover::before {
-    background-color: var(--color-primary);
-}
-
-
-.service-content {
-    min-width: 0;
-}
-
-.service-content h3 {
-    margin-bottom: 0.5rem;
-    color: var(--color-primary-dark);
-    font-size: clamp(1.3rem, 2vw, 1.65rem);
-}
-
-.service-content p {
-    max-width: 580px;
-    margin: 0;
-    color: var(--color-text-muted);
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.5;
 }
 
 .price-card {
@@ -810,59 +825,88 @@ h1 {
     display: flex;
     min-width: 0;
     min-height: 100%;
+    overflow: hidden;
     flex-direction: column;
-    padding: 0;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-primary-soft);
     border-radius: var(--radius-large);
-    background-color: rgb(255 255 255 / 38%);
-    box-shadow: 0 18px 45px rgb(98 63 92 / 7%);
+    background-color: var(--color-surface);
     transition:
         border-color 180ms ease,
         transform 180ms ease;
 }
 
 .price-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.price-card-recommended {
     border-color: var(--color-primary-dark);
-    box-shadow: 0 24px 55px rgb(98 63 92 / 13%);
-    transform: translateY(-4px);
+}
+
+.price-card-recommended::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 7px;
+    background-color: var(--color-primary);
+    content: "";
+}
+
+.price-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.75rem, 3vw, 2.25rem);
+    text-align: center;
 }
 
 .price-card h3 {
     min-height: 2.5em;
     margin: 0;
-    padding-inline: clamp(1.5rem, 3vw, 2.25rem);
     color: var(--color-primary-dark);
+    font-size: clamp(1.45rem, 2.4vw, 1.85rem);
 }
 
-.price-card-tag {
-    margin: 0 0 1.75rem;
-    padding: 1rem clamp(1.5rem, 3vw, 2.25rem);
-    border-radius: calc(var(--radius-large) - 2px)
-        calc(var(--radius-large) - 2px)
-        0
-        0;
-    background-color: var(--color-primary-dark);
-    color: var(--color-surface);
-    font-size: 0.78rem;
+.price {
+    margin: 1.25rem 0;
+    color: var(--color-primary-dark);
+    font-size: clamp(3.75rem, 6vw, 5.25rem);
     font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+}
+
+.price span {
+    margin-left: 0.3rem;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
 }
 
 .price-description {
-    min-height: 4.8em;
-    margin: 0;
-    padding: 0 clamp(1.5rem, 3vw, 2.25rem) 1.75rem;
+    min-height: 5.2em;
+    margin: 0 0 1.5rem;
     color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.price-card-button {
+    width: 100%;
+    margin-top: auto;
 }
 
 .price-features {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 0;
     margin: auto 0 0;
-    padding: 1.75rem clamp(1.5rem, 3vw, 2.25rem)
-        clamp(1.75rem, 3vw, 2.5rem);
+    padding: 0 clamp(1.5rem, 3vw, 2.25rem)
+        clamp(1.75rem, 3vw, 2.25rem);
     background-color: var(--color-primary-soft);
     border-radius: 0 0
         calc(var(--radius-large) - 2px)
@@ -872,44 +916,98 @@ h1 {
 
 .price-features li {
     position: relative;
-    padding-left: 1.75rem;
+    min-height: 58px;
+    padding: 1rem 0 1rem 2rem;
+    border-bottom: 1px solid rgb(98 63 92 / 14%);
     color: var(--color-text-muted);
-    line-height: 1.45;
+    line-height: 1.35;
+}
+
+.price-features li:last-child {
+    border-bottom: 0;
 }
 
 .price-features li::before {
     position: absolute;
-    top: 0.15rem;
+    top: 1.05rem;
     left: 0;
     display: inline-flex;
-    width: 1.15rem;
-    height: 1.15rem;
+    width: 1.25rem;
+    height: 1.25rem;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background-color: var(--color-primary-dark);
     color: var(--color-surface);
     content: "✓";
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 800;
 }
 
-.price {
-    margin: 1.25rem clamp(1.5rem, 3vw, 2.25rem);
-    padding-block: 1.25rem;
-    border-block: 1px solid var(--color-border);
+.pricing-common {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border: 2px solid var(--color-primary-soft);
+    border-radius: var(--radius-large);
+    background-color: var(--color-background);
+}
+
+.pricing-common-heading p {
+    margin-bottom: 0.4rem;
     color: var(--color-primary-dark);
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
     font-weight: 800;
-    letter-spacing: -0.06em;
+    line-height: 1.2;
 }
 
-.price span {
-    margin-left: 0.25rem;
+.pricing-common-heading span {
+    display: block;
+    max-width: 430px;
     color: var(--color-text-muted);
     font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+.pricing-common-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-common-list li {
+    position: relative;
+    min-height: 58px;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.pricing-common-list li::before {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    display: inline-flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    content: "✓";
+    font-size: 0.72rem;
+    font-weight: 800;
+    transform: translateY(-50%);
 }
 
 .pricing-action {
@@ -1260,177 +1358,16 @@ h1 {
     min-width: 0;
 }
 
-.clara-carousel {
+.clara-statement {
     position: relative;
     margin-bottom: 2.5rem;
 }
 
-.clara-slides {
-    display: grid;
-}
-
-.clara-quote {
-    grid-area: 1 / 1;
+.clara-quote-static {
     margin: 0;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
 }
 
-.clara-quote[hidden] {
-    display: block;
-}
-
-.clara-quote.is-active {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-    animation: clara-slide-in 320ms ease;
-}
-
-.clara-carousel-controls {
-    display: flex;
-    max-width: 520px;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.clara-carousel-slider {
-    width: 100%;
-    height: 24px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    cursor: grab;
-    appearance: none;
-    -webkit-appearance: none;
-    touch-action: pan-y;
-}
-
-.clara-carousel-slider:active {
-    cursor: grabbing;
-}
-
-.clara-carousel-slider::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 5px;
-    border-radius: 999px;
-    background: linear-gradient(
-        to right,
-        var(--color-primary-dark),
-        var(--color-primary),
-        var(--color-primary-soft)
-    );
-    box-shadow: inset 0 1px 2px rgb(98 63 92 / 14%);
-}
-
-.clara-carousel-slider::-webkit-slider-thumb {
-    width: 22px;
-    height: 22px;
-    margin-top: -8.5px;
-    border: 5px solid var(--color-surface);
-    border-radius: 50%;
-    background-color: var(--color-primary-dark);
-    box-shadow:
-        0 0 0 2px var(--color-primary),
-        0 6px 16px rgb(98 63 92 / 24%);
-    cursor: grab;
-    appearance: none;
-    -webkit-appearance: none;
-    transition:
-        background-color 180ms ease,
-        box-shadow 180ms ease,
-        transform 180ms ease;
-}
-
-.clara-carousel-slider:hover::-webkit-slider-thumb {
-    background-color: var(--color-primary);
-    box-shadow:
-        0 0 0 3px rgb(128 95 121 / 24%),
-        0 8px 18px rgb(98 63 92 / 28%);
-    transform: scale(1.08);
-}
-
-.clara-carousel-slider:active::-webkit-slider-thumb {
-    cursor: grabbing;
-    transform: scale(0.96);
-}
-
-.clara-carousel-slider::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    border: 0;
-    border-radius: 999px;
-    background: linear-gradient(
-        to right,
-        var(--color-primary-dark),
-        var(--color-primary),
-        var(--color-primary-soft)
-    );
-    box-shadow: inset 0 1px 2px rgb(98 63 92 / 14%);
-}
-
-.clara-carousel-slider::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    border: 5px solid var(--color-surface);
-    border-radius: 50%;
-    background-color: var(--color-primary-dark);
-    box-shadow:
-        0 0 0 2px var(--color-primary),
-        0 6px 16px rgb(98 63 92 / 24%);
-    cursor: grab;
-    transition:
-        background-color 180ms ease,
-        box-shadow 180ms ease,
-        transform 180ms ease;
-}
-
-.clara-carousel-slider:hover::-moz-range-thumb {
-    background-color: var(--color-primary);
-    box-shadow:
-        0 0 0 3px rgb(128 95 121 / 24%),
-        0 8px 18px rgb(98 63 92 / 28%);
-    transform: scale(1.08);
-}
-
-.clara-carousel-slider:active::-moz-range-thumb {
-    cursor: grabbing;
-    transform: scale(0.96);
-}
-
-.clara-carousel-slider:focus-visible {
-    outline: 3px solid var(--color-primary-dark);
-    outline-offset: 5px;
-    border-radius: 999px;
-}
-
-@keyframes clara-slide-in {
-    from {
-        opacity: 0;
-        transform: translateX(14px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.clara-quote-mark {
-    display: block;
-    height: 0.72em;
-    margin-left: -0.08em;
-    color: var(--color-primary);
-    font-family: Georgia, serif;
-    font-size: clamp(5rem, 10vw, 9rem);
-    font-weight: 700;
-    line-height: 0.8;
-}
-
-.clara-quote > h2 {
+.clara-quote-static > h2 {
     position: relative;
     max-width: 18ch;
     margin-bottom: 2rem;
@@ -1442,23 +1379,15 @@ h1 {
     letter-spacing: -0.025em;
 }
 
-.clara-quote footer {
-    display: flex;
-    max-width: 520px;
-    flex-direction: column;
-    padding-top: 1.25rem;
-    border-top: 0;
-}
-
-.clara-quote strong {
-    color: var(--color-primary-dark);
-    font-size: 1.1rem;
-}
-
-.clara-quote footer span {
-    margin-top: 0.25rem;
-    color: var(--color-text-muted);
-    line-height: 1.4;
+.clara-quote-mark {
+    display: block;
+    height: 0.72em;
+    margin-left: -0.08em;
+    color: var(--color-primary);
+    font-family: Georgia, serif;
+    font-size: clamp(5rem, 10vw, 9rem);
+    font-weight: 700;
+    line-height: 0.8;
 }
 
 .site-footer {
@@ -1488,29 +1417,31 @@ h1 {
 
 .contact-heading {
     position: relative;
-    display: grid;
-    min-height: 250px;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
-    gap: clamp(2rem, 5vw, 5rem);
-    align-items: end;
     overflow: hidden;
     margin-bottom: 2.5rem;
-    padding: 2rem 2rem 0;
+    padding: clamp(1.75rem, 4vw, 3rem);
     border: 1px solid rgb(255 255 255 / 16%);
     border-radius: var(--radius-large);
-    background:
-        linear-gradient(
-            135deg,
-            rgb(255 255 255 / 7%),
-            rgb(255 255 255 / 2%)
-        );
+    background-color: rgb(255 255 255 / 6%);
+}
+
+.contact-heading::after {
+    position: absolute;
+    top: -85px;
+    right: -65px;
+    z-index: 0;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: var(--color-hover);
+    content: "";
+    pointer-events: none;
 }
 
 .contact-heading-text {
     position: relative;
     z-index: 2;
-    align-self: center;
-    padding-bottom: 2rem;
+    max-width: 700px;
 }
 
 .contact-heading-text > p:last-child {
@@ -1551,7 +1482,6 @@ h1 {
 .contact-team {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.6rem;
     margin: 0;
 }
 
@@ -1567,6 +1497,14 @@ h1 {
     border-radius: 14px;
     background-color: rgb(255 255 255 / 5%);
     overflow: hidden;
+}
+
+.contact-person.contact-person-clara {
+    min-height: 275px;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+    padding: 0 1.5rem 0 0;
 }
 
 .contact-person::before {
@@ -1616,6 +1554,18 @@ h1 {
     margin-top: 0.25rem;
 }
 
+.contact-person-clara .contact-person-links {
+    gap: 0.35rem;
+    margin-top: 0.85rem;
+}
+
+.contact-person-clara .contact-person-info a {
+    min-height: 0;
+    padding-block: 0;
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
 .contact-person-info a {
     display: inline-flex;
     min-height: 28px;
@@ -1638,8 +1588,44 @@ h1 {
     background-color: var(--color-surface);
 }
 
-.contact-person-clara img {
-    border-color: var(--color-hover);
+.contact-person-clara .contact-clara-image {
+    width: 230px;
+    max-width: none;
+    height: 275px;
+    align-self: end;
+    margin: 0 0 -1px 0;
+    border: 0;
+    border-radius: 0;
+    object-fit: contain;
+    object-position: left bottom;
+    transform: none;
+}
+
+.contact-person-clara .contact-person-info {
+    position: relative;
+    z-index: 1;
+    align-self: center;
+    justify-self: start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-18px);
+}
+
+.contact-person-clara .contact-person-info h3 {
+    margin-bottom: 0.55rem;
+    color: var(--color-hover);
+    font-size: clamp(2.15rem, 3vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
+}
+
+.contact-person-clara .contact-person-info > span {
+    color: var(--color-surface);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 .contact-form {
@@ -2019,7 +2005,7 @@ textarea.invalid {
     margin-inline: auto;
 }
 
-.clara-quote > h2 {
+.clara-quote-static > h2 {
     max-width: 18ch;
 }
 
@@ -2045,19 +2031,13 @@ textarea.invalid {
 }
 
 .contact-heading {
-    min-height: 230px;
-    grid-template-columns: minmax(0, 1fr) 240px;
-    gap: 1.5rem;
+    min-height: 0;
     margin-bottom: 2rem;
-    padding: 1.5rem 1.5rem 0;
+    padding: 1.75rem;
 }
 
 .contact-heading-text {
-    padding-bottom: 1.5rem;
-}
-
-.contact-heading-visual {
-    height: 230px;
+    padding-bottom: 0;
 }
 
 .contact-team {
@@ -2198,6 +2178,16 @@ textarea.invalid {
     width: 100%;
 }
 
+.pricing-common {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+}
+
+.pricing-common-list {
+    grid-template-columns: 1fr;
+}
+
     .included-image img {
     height: 230px;
 }
@@ -2220,13 +2210,11 @@ textarea.invalid {
 
 .contact-heading {
     min-height: 0;
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding: 1.5rem 1.25rem 0;
+    padding: 1.5rem 1.25rem;
 }
 
 .contact-heading-text {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
 }
 
 .contact-heading-visual {
@@ -2264,6 +2252,53 @@ textarea.invalid {
 
 .contact-person-info a {
     font-size: 0.8rem;
+}
+
+.contact-person.contact-person-clara {
+    min-height: 235px;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0 1rem 0 0;
+}
+
+.contact-person-clara .contact-clara-image {
+    width: 145px;
+    max-width: none;
+    height: 235px;
+    align-self: end;
+    margin: 0 0 -1px;
+    object-fit: contain;
+    object-position: left bottom;
+}
+
+.contact-person-clara .contact-person-info {
+    align-self: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-8px);
+}
+
+.contact-person-clara .contact-person-info h3 {
+    margin-bottom: 0.4rem;
+    font-size: clamp(1.75rem, 9vw, 2.15rem);
+    line-height: 0.95;
+}
+
+.contact-person-clara .contact-person-info > span {
+    font-size: 0.88rem;
+    line-height: 1.3;
+}
+
+.contact-person-clara .contact-person-links {
+    gap: 0.3rem;
+    margin-top: 0.7rem;
+}
+
+.contact-person-clara .contact-person-info a {
+    font-size: 0.78rem;
+    line-height: 1.3;
 }
 
 .contact-form {
@@ -2307,32 +2342,31 @@ textarea.invalid {
     gap: 2.5rem;
 }
 
-.included-highlight {
-    padding-top: 1.25rem;
+.month-example-heading {
+    margin-bottom: 1.75rem;
 }
 
-.services-list {
-    gap: 0.7rem;
+.month-timeline::before {
+    left: 0.4rem;
 }
 
-.services-list li {
-    padding: 1.35rem 1.15rem 1.35rem 3.5rem;
+.month-timeline li {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    padding: 0 0 1.75rem 2rem;
 }
 
-.services-list li::before {
-    top: 1.5rem;
-    left: 1.25rem;
-    width: 1.1rem;
-    height: 1.1rem;
-    border-width: 3px;
+.month-timeline li::before {
+    top: 0.3rem;
+    left: 0;
 }
 
-.services-list li:hover {
-    transform: none;
+.month-period {
+    font-size: 0.75rem;
 }
 
-.service-content h3 {
-    font-size: 1.3rem;
+.month-timeline strong {
+    font-size: 1.1rem;
 }
 
     .button-light {
@@ -2369,13 +2403,10 @@ textarea.invalid {
     font-size: 5.5rem;
 }
 
-.clara-quote > h2 {
+.clara-quote-static > h2 {
     font-size: clamp(1.8rem, 9vw, 2.6rem);
 }
 
-.clara-quote footer {
-    padding-top: 1.1rem;
-}
 
     .section,
     .site-footer {
