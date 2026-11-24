@@ -2110,11 +2110,7 @@ textarea.invalid {
 }
 
 .hero::before {
-    top: 54%;
-    right: -45px;
-    bottom: auto;
-    width: 130px;
-    height: 130px;
+    display: none;
 }
 
 .hero::after {
@@ -2122,6 +2118,13 @@ textarea.invalid {
     right: 0;
     bottom: 0;
     width: 90%;
+    background:
+        radial-gradient(
+            circle 70px at calc(100% - 6px) 0,
+            var(--color-hover) 0 69px,
+            transparent 70px
+        ),
+        var(--color-primary-soft);
     clip-path: polygon(
         26% 0,
         100% 0,
