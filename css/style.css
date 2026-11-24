@@ -2117,12 +2117,12 @@ textarea.invalid {
 }
 
 .hero::after {
-    top: 60%;
+    top: 57%;
     right: 0;
     bottom: 0;
-    width: 94%;
+    width: 90%;
     clip-path: polygon(
-        18% 0,
+        26% 0,
         100% 0,
         100% 100%,
         0 100%
@@ -2130,30 +2130,30 @@ textarea.invalid {
 }
 
 .hero-content {
-    gap: 0.75rem;
+    gap: 1.25rem;
 }
 
 .hero-visual {
     width: 100%;
-    min-height: 380px;
-    margin-top: -3.5rem;
+    min-height: 340px;
+    margin-top: -1.5rem;
     margin-inline: auto;
     justify-content: center;
 }
 
 .hero-visual::before {
-    bottom: -95px;
-    left: 0;
-    width: 145px;
-    height: 145px;
+    bottom: -100px;
+    left: 2%;
+    width: 140px;
+    height: 140px;
 }
 
 .hero-visual img {
     right: 0;
-    bottom: -45px;
-    width: min(96vw, 380px);
+    bottom: -42px;
+    width: min(88vw, 350px);
     height: auto;
-    max-height: 450px;
+    max-height: 420px;
     margin-inline: auto;
     object-fit: contain;
     object-position: center bottom;
