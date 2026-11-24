@@ -2110,10 +2110,11 @@ textarea.invalid {
 }
 
 .hero::before {
-    right: -55px;
-    bottom: -45px;
-    width: 135px;
-    height: 135px;
+    top: 54%;
+    right: -45px;
+    bottom: auto;
+    width: 130px;
+    height: 130px;
 }
 
 .hero::after {
