@@ -2144,7 +2144,14 @@ h1 {
     min-height: 0;
     padding: 1.5rem 1.25rem;
 }
-
+    
+.contact-heading::after {
+    top: -50px;
+    right: -55px;
+    width: 135px;
+    height: 135px;
+}
+    
 .contact-heading-text {
     padding-bottom: 0;
 }
