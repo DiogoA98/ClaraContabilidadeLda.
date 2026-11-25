@@ -892,7 +892,7 @@ h1 {
     padding: clamp(1.5rem, 3vw, 2.25rem);
     border: 2px solid var(--color-primary-soft);
     border-radius: var(--radius-large);
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
 }
 
 .pricing-common-heading p {
@@ -962,7 +962,7 @@ h1 {
     padding: clamp(1.5rem, 3vw, 2.25rem);
     border: 1px solid var(--color-primary);
     border-radius: var(--radius-large);
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
     isolation: isolate;
 }
 
@@ -1105,6 +1105,12 @@ h1 {
         );
 }
 
+.clara-section-label {
+    margin-bottom: 3rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+}
+
 .clara-content {
     position: relative;
     z-index: 1;
@@ -1170,7 +1176,7 @@ h1 {
     padding: 1rem 1.25rem 1rem 1.5rem;
     border: 1px solid var(--color-primary);
     border-radius: var(--radius-medium);
-    background-color: var(--color-primary-soft);
+    background-color: var(--color-surface);
     color: var(--color-primary-dark);
 }
 
