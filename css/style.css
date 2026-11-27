@@ -241,19 +241,6 @@ textarea:focus-visible {
     isolation: isolate;
 }
 
-.hero::before {
-    position: absolute;
-    top: -70px;
-    right: -70px;
-    z-index: 0;
-    width: 165px;
-    height: 165px;
-    border-radius: 50%;
-    background-color: var(--color-hover);
-    content: "";
-    pointer-events: none;
-}
-
 .hero::after {
     position: absolute;
     top: 0;
@@ -283,6 +270,7 @@ textarea:focus-visible {
 
 .hero-text {
     min-width: 0;
+    transform: translateY(-2rem);
 }
 
 .hero-visual {
@@ -293,19 +281,6 @@ textarea:focus-visible {
     justify-content: flex-start;
     margin: 0;
     isolation: isolate;
-}
-
-.hero-visual::before {
-    position: absolute;
-    bottom: -135px;
-    left: -20px;
-    z-index: 0;
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    background-color: var(--color-hover);
-    content: "";
-    pointer-events: none;
 }
 
 .hero-visual picture {
@@ -328,8 +303,6 @@ textarea:focus-visible {
     object-position: center bottom;
 }
 
-
-.eyebrow,
 .section-label {
     width: fit-content;
     margin-bottom: 1.25rem;
@@ -1273,11 +1246,6 @@ h1 {
     scroll-margin-top: 2rem;
 }
 
-.site-footer .section-label {
-    background-color: var(--color-hover);
-    color: var(--color-primary-dark);
-}
-
 .site-footer h2 {
     color: var(--color-surface);
 }
@@ -1778,25 +1746,8 @@ textarea.invalid {
     padding-block: 3.5rem 0;
 }
 
-.hero::before {
-    top: auto;
-    right: -70px;
-    bottom: -65px;
-    width: 175px;
-    height: 175px;
-}
-
-.hero::after {
-    top: 48%;
-    right: 0;
-    bottom: 0;
-    width: 88%;
-    clip-path: polygon(
-        22% 0,
-        100% 0,
-        100% 100%,
-        0 100%
-    );
+.hero-text {
+    transform: none;
 }
 
 .hero-content {
@@ -1996,10 +1947,6 @@ textarea.invalid {
     padding-block: 3rem 0;
 }
 
-.hero::before {
-    display: none;
-}
-
 .hero::after {
     top: 57%;
     right: 0;
@@ -2030,13 +1977,6 @@ textarea.invalid {
     margin-top: -1.5rem;
     margin-inline: auto;
     justify-content: center;
-}
-
-.hero-visual::before {
-    bottom: -100px;
-    left: 2%;
-    width: 140px;
-    height: 140px;
 }
 
 .hero-visual img {
