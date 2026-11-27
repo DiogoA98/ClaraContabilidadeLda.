@@ -1964,13 +1964,13 @@ textarea.invalid {
     top: 57%;
     right: 0;
     bottom: 0;
-    width: 90%;
+    width: 100%;
     background-color: var(--color-primary-soft);
     clip-path: polygon(
-        26% 0,
+        52% 0,
         100% 0,
         100% 100%,
-        0 100%
+        10% 100%
     );
 }
 
@@ -2062,10 +2062,23 @@ h1 {
 }
 
 .contact-heading::after {
-    top: -50px;
-    right: -55px;
-    width: 135px;
-    height: 135px;
+    top: -45px;
+    right: -45px;
+    width: 110px;
+    height: 110px;
+}
+
+.contact-heading h2 {
+    max-width: 11ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.15rem, 9.5vw, 2.5rem);
+    line-height: 1.05;
+}
+
+.contact-heading-text > p:last-child {
+    max-width: 28ch;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .contact-heading-text {
