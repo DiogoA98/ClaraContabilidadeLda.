@@ -247,10 +247,10 @@ textarea:focus-visible {
     right: 0;
     bottom: 0;
     z-index: -1;
-    width: 50.5%;
+    width: 43%;
     background-color: var(--color-primary-soft);
     clip-path: polygon(
-        34% 0,
+        46% 0,
         100% 0,
         100% 100%,
         0 100%
@@ -1746,6 +1746,19 @@ textarea.invalid {
     padding-block: 3.5rem 0;
 }
 
+.hero::after {
+    top: 48%;
+    right: 0;
+    bottom: 0;
+    width: 88%;
+    clip-path: polygon(
+        24% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
 .hero-text {
     transform: none;
 }
@@ -1952,13 +1965,7 @@ textarea.invalid {
     right: 0;
     bottom: 0;
     width: 90%;
-    background:
-        radial-gradient(
-            circle 70px at calc(100% - 6px) 0,
-            var(--color-hover) 0 69px,
-            transparent 70px
-        ),
-        var(--color-primary-soft);
+    background-color: var(--color-primary-soft);
     clip-path: polygon(
         26% 0,
         100% 0,
